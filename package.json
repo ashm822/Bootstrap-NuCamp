@@ -4,7 +4,7 @@
   "description": "This is the test Nucamp website",
   "main": "index.html",
   "scripts": {
-    "lite":"lite-server",
+    "lite": "lite-server",
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9"
   }
