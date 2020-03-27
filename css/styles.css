@@ -4,6 +4,7 @@ body {
 
 h1, h2, h3 {
     font-family: "Lobster", cursive;
+    
 }
 
 h2 {
@@ -22,9 +23,6 @@ header h2 {
 .jumbotron {
     margin:0;
     padding: 30px;
-    /*background-image: url("../images/header.png");
-    background-size: cover;
-    background-repeat: repeat;*/
     background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
     color: white;
 }
@@ -37,4 +35,11 @@ header h2 {
 
 .navbar{
     background-color: purple;
+}
+
+#carouselButton {
+    position:absolute;
+    right: 0;
+    bottom: 0;
+
 }
