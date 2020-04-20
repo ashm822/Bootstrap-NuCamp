@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+
+
+    <!-- Additional CSS must be placed after Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+    <link rel="stylesheet" href="css/styles2.css" />
+
+    <title>NuCamp: A Better Way To Camp</title>
+</head>
+
+<body>
+    <!-- navbars -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucamNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nucampNavbar">
+                <ul class="navbar-nav nav-fill">
+                    <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i>
+                            About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactus.html"><i
+                                class="fa fa-address-card fa-lg"></i> Contact</a></li>
+                </ul>
+                <div class="col-md-4 col-xl-2">
+                    <a class="btn btn-large bg-success text-white mr-0" data-toggle="modal"
+                        data-target="#reserveModal">Reserve
+                        Campsite</a>
+                </div>
+                <!-- Search box -->
+                <form class="form-inline ml-lg-auto mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search this site" aria-label="Search">
+                    <button class="btn btn bg-success text-white my-2 my-sm-0"  type="submit">Go</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- JUMBOTRON -->
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-3 col-md-2">
+                    <img src="img/logo.png" class="img-fluid" />
+                </div>
+                <div class="col">
+                    <h1>NuCamp</h1>
+                    <h2>a better way to camp</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal fade bd-example-modal-lg" id="reserveModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Reserve a Campsite</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="reserveForm" action="">
+                        <div class="row form-group">
+                            <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                            <div class="col">
+                                <select class="form-control" name="numCampers" id="numCampers">
+                                    <option value selected hidden>Select...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="date" class="col-sm-6 col-form-label" name="date">Date</label>
+                            <div class="col">
+                                <input type="date" id="date" class="form-control" placeholder="Date">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="campType" class="col-form-label col-sm-6"> Campsite Type</label>
+                            <div class="col-sm-6 btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                    <input type="radio" name="options" id="siteTent" autocomplete="off" checked> Tent
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="siteRv" autocomplete="off"> RV
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col">
+                                <button type="button" class="btn btn-secondary" id="cancelbtn"
+                                    data-dismiss="modal">Cancel</button>
+                                <button text="Search" type="submit" class="btn btn-primary"
+                                    id="searchbtn">Search</button>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="container border">
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3">
+                <h2>Discover & Review</h2>
+            </div>
+            <div class="col">
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3>Our Campsites</h3>
+                        <p class="d-sm-block d-none">Explore our growing database of curated campsites and leave your
+                            own reviews!</p>
+                        <p><a class="btn btn-success" href="#" role="button">View details &raquo;</a></p>
+                    </div>
+                    <img class="d-flex ml-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg"
+                        alt="Breadcrumb Trail thumbnail" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container border">
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3">
+                <h2>Featured Campsites</h2>
+            </div>
+            <div class="col">
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3 class="text-sm-left">React Lake Campground</h3>
+                        <p class="text-ml-3" class="d-sm-block d-none">Nestled in the foothills of the Chrome Mountains,
+                            this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                        <p><a class="btn btn-success" href="#" role="button">View details &raquo;</a></p>
+                        
+                    </div>
+                    <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake thumbnail"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container border">
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-3">
+                <h2 class="text-sm-left">Our Community Partners</h2>
+            </div>
+            <div class="col">
+                <div class="media">
+                    <div class="media-body align-self-center">  
+                    <h3 class="text-sm-left">Bootstrap Outfitters</h3>
+                    <p class="d-sm-block d-none">Bootstrap Outfitters supplies you with gear you need at prices you
+                        can't beat.</p>
+                    <p><a class="btn btn-success" href="#" role="button">View details &raquo;</a></p>
+                </div>
+                <img class="d-flex ml-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters">
+            </div>
+        </div>
+    </div>
+    
+    <!--  removing the reserve form from body //
+    <div class="container">
+        <div class="row row-content align-items-center">
+            <div class="col-sm-6 mx-auto">
+                <div class="card-inline">
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                    <div class="card-body">
+                        <form id="reserveForm" action="">
+                            <div class="row form-group">
+                                <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                                <div class="col">
+                                    <select class="form-control" name="numCampers" id="numCampers">
+                                        <option value selected hidden>Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <label for="date" class="col-sm-6 col-form-label" name="date">Date</label>
+                                <div class="col">
+                                    <input type="date" id="date" class="form-control" placeholder="Date">
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col">
+                                    <button text="Search" type="submit" class="btn btn-primary" id="">Reserve</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-sm-2 offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Sites</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-sm-5 text-center">
+                    <h5>Social</h5>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i
+                            class="fa fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i
+                            class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                            class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                            class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
